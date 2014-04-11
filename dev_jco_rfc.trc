@@ -1,0 +1,822 @@
+
+**** Error file opened at 20140404 112521 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:25:21,307<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:25:21 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:25:23,268<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:25:23 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:25:25,269<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:25:25 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:25:29,270<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:25:29 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     4
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:25:37,273<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:25:37 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     5
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:25:53,281<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:25:53 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     6
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 112618 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:26:18,535<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:26:18 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:26:20,502<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:26:20 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:26:24,503<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:26:24 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 112657 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:26:57,192<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:26:57 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:26:59,158<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:26:59 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:27:03,158<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:27:03 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 113222 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:32:22,763<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:32:22 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:32:24,731<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:32:24 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:32:28,731<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:32:28 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:32:32,733<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:32:32 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     4
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 113432 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:34:32,647<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:34:32 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:34:34,614<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:34:34 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:34:36,615<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:34:36 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:34:40,615<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:34:40 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     4
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:34:48,618<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:34:48 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     5
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:35:04,623<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:35:04 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     6
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:35:36,635<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:35:36 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     7
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:36:40,656<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:36:40 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     8
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 113808 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:38:08,578<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:38:08 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:38:10,538<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:38:10 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:38:12,539<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:38:12 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:38:16,540<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:38:16 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     4
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:38:24,543<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:38:24 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     5
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:38:40,549<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:38:40 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     6
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:39:12,555<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:39:12 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     7
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:40:16,572<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:40:16 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     8
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:42:24,610<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:42:24 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     9
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 114410 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:44:10,709<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:10 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:12,676<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:12 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:14,677<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:14 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:18,679<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:18 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     4
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:26,682<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:26 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     5
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+
+**** Error file opened at 20140404 114446 GMT-03:00 Rel 3.0.10 (2013-08-08) [720.440]
+Error:  >Fri Apr 04 11:44:46,102<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:46 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      niuxi.c
+LINE        1814
+DETAIL      NiPGetServByName: 'sapgw00' not found
+SYSTEM CALL getaddrinfo
+COUNTER     1
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:48,069<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:48 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     2
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:52,070<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:52 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     3
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+Error:  >Fri Apr 04 11:44:56,071<    RfcException: [null]
+    message: Connect to SAP gateway failed
+    Connection parameters: TPNAME=idoc_receive GWHOST=neptune.intrigo.com GWSERV=sapgw00
+
+ERROR       service 'sapgw00' unknown
+TIME        Fri Apr  4 11:44:56 2014
+RELEASE     720
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -3
+MODULE      nixxsl.cpp
+LINE        184
+DETAIL      NiSrvLGetServNo: service name cached as unknown
+COUNTER     4
+
+    Return code: RFC_FAILURE(1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+

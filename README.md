@@ -16,9 +16,33 @@
 # Use Case <a name="usecase"/>
 
 
+## Foreword <a name="foreword"/>
+To make this Anypoint Template run, there are certain preconditions that must be considered. All of them deal with the preparations in both source (SAP) and destination (SFDC) systems, that must be made in order for all to run smoothly. 
+**Failling to do so could lead to unexpected behavior of the template.**
+
+### SAP Pre Conditions
+
+### SFDC Pre Conditions
+
+This template makes use of the `External ID` field offered by Salesforce. Here is a short description on how SFDC define external ID's 
+
++ [What is an external ID?](http://help.salesforce.com/apex/HTViewHelpDoc?id=faq_import_general_what_is_an_external.htm)
+
+The templates uses the External ID in order to do xRef between the entities in both systems. The idea is, once an entity is created in SFDC it's decorated with an ID from the source system which will be used afteward for the template to reference it.
+
+You will need to create a new custom field in your **Product** entity in SFDC with the following name: 
+
++ `sap_external_id`
+
+For instructions on how to create a custom field in SFDC plase check this link:
+
++ [Create Custom Fields](http://www.salesforce.com/smallbusinesscenter/faq/customize.jsp#customfield)
+
+
 # Run it! <a name="runit"/>
 
 Simple steps to get SAP2SFDC-product-broadcast running
+
 
 ## Running on premise <a name="runonopremise"/>
 
