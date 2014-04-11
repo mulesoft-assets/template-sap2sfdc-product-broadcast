@@ -23,10 +23,10 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
     <batch:job name="businessLogicBatch1">
         <batch:threading-profile poolExhaustedAction="WAIT"/>
         <batch:input>
-        	<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" >
+        	<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true">
             	<sap:default-in-memory-tid-store/>
         	</sap:inbound-endpoint>
-        	<sap:object-to-xml doc:name="SAP Object to XML"/>
+<!--         	<sap:object-to-xml doc:name="SAP Object to XML"/> -->
             <data-mapper:transform config-ref="xml_to_list_product2_" doc:name="XML To List&lt;Product2&gt;"/>
         </batch:input>
         <batch:process-records>
