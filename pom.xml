@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mule.templates</groupId>
@@ -12,10 +13,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>3.5.0-M4</mule.version>
-		<munit.version>3.5-M1</munit.version>
+		<mule.version>3.5.0-M5-SNAPSHOT</mule.version>
+		<munit.version>3.5-M2-SNAPSHOT</munit.version>
+<!-- 		<munit.version>3.5-M1</munit.version> -->
 		<junit.version>4.9</junit.version>
-		
+
 		<sap.transport.version>2.2.2-SNAPSHOT</sap.transport.version>
 
 		<eclipsePluginVersion>2.8</eclipsePluginVersion>
@@ -55,7 +57,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -111,11 +113,15 @@
 							<groupId>com.mulesoft.muleesb.transports</groupId>
 							<artifactId>mule-transport-sap</artifactId>
 						</inclusion>
-					<inclusion>
-                            <groupId>org.mule.modules</groupId>
-                            <artifactId>mule-module-sfdc</artifactId>
-                        </inclusion>
-                    </inclusions>
+						<inclusion>
+							<groupId>org.mule.modules</groupId>
+							<artifactId>mule-module-synchronize</artifactId>
+						</inclusion>
+						<inclusion>
+							<groupId>org.mule.modules</groupId>
+							<artifactId>mule-module-sfdc</artifactId>
+						</inclusion>
+					</inclusions>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -228,7 +234,8 @@
 						<configuration>
 							<tasks>
 								<!-- Using an ant task to deflate cloveretl-engine.zip -->
-								<unzip dest="${project.build.testOutputDirectory}" src="${project.build.testOutputDirectory}/cloveretl-engine.zip"/>
+								<unzip dest="${project.build.testOutputDirectory}"
+									src="${project.build.testOutputDirectory}/cloveretl-engine.zip" />
 							</tasks>
 						</configuration>
 						<goals>
@@ -437,7 +444,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		
+
 		<!-- for testing -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -503,19 +510,25 @@
 			<version>2.7.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Connectors -->
 		<dependency>
 			<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-sap</artifactId>
-			<version>${sap.transport.version}</version>
+			<version>2.2.2-SNAPSHOT</version>
 		</dependency>
-	<dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-sfdc</artifactId>
-            <version>5.4.5-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-synchronize</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-sfdc</artifactId>
+			<!-- <version>5.4.7-SNAPSHOT</version> -->
+			<version>5.4.3</version>
+		</dependency>
+	</dependencies>
 
 	<repositories>
 		<repository>
@@ -558,6 +571,16 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
-	</pluginRepositories>
 
+		<pluginRepository>
+			<id>nexus-release</id>
+			<name>nexus releases</name>
+			<url>http://repository.mulesoft.org/releases</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>nexus-snaps</id>
+			<name>nexus snaps</name>
+			<url>http://repository.mulesoft.org/snapshots</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

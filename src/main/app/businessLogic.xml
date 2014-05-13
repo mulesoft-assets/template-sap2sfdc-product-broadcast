@@ -15,27 +15,20 @@ http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/
 http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
 http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfdc/current/mule-sfdc.xsd
 http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd">
-    <sfdc:config name="Salesforce" username="cesar.garcia@mulesoft.com.sfdc2sfdc" password="MKSFDCSBCesar8" securityToken="a3QAH5ybOL3z4El7yd5D8uIF" url="https://test.salesforce.com/services/Soap/u/28.0" doc:name="Salesforce">
-        <sfdc:connection-pooling-profile initialisationPolicy="INITIALISE_ONE" exhaustedAction="WHEN_EXHAUSTED_GROW"/>
-    </sfdc:config>
     <data-mapper:config name="xml_to_list_product2_" transformationGraphPath="xml_to_list_product2_.grf" doc:name="xml_to_list_product2_"/>
     
     <batch:job name="businessLogicBatch1">
         <batch:threading-profile poolExhaustedAction="WAIT"/>
         <batch:input>
-        	<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true">
-            	<sap:default-in-memory-tid-store/>
-        	</sap:inbound-endpoint>
 <!--         	<sap:object-to-xml doc:name="SAP Object to XML"/> -->
             <data-mapper:transform config-ref="xml_to_list_product2_" doc:name="XML To List&lt;Product2&gt;"/>
         </batch:input>
         <batch:process-records>
             <batch:step name="foreachMaterialInAUpsertProductInBStep">
                 <batch:commit size="200" doc:name="Batch Commit">
-<!--                     <logger message="#[payload]" level="INFO" doc:name="Logger"/> -->
-	 				<sfdc:upsert config-ref="Salesforce"  doc:name="Salesforce" type="Product2" externalIdFieldName="sap_external_id__c">
+                    <sfdc:upsert config-ref="Salesforce" externalIdFieldName="sap_external_id__c" type="Product2" doc:name="Salesforce">
                         <sfdc:objects ref="#[payload]"/>
-	        		</sfdc:upsert>
+                    </sfdc:upsert>
                 </batch:commit>
             </batch:step>
         </batch:process-records>
