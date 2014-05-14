@@ -21,9 +21,10 @@ Here you should:
 Here you should not:
 	* Run validations against external systems
 	* Choose flow of your application based on input parameters">
-		<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true" connector-ref="SAP">
-        	<sap:default-in-memory-tid-store/>
-        </sap:inbound-endpoint>
-        <batch:execute name="businessLogicBatch1" doc:name="Batch Execute"/>
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="${http.port}" doc:name="HTTP"/>
+        <logger level="INFO" doc:name="Logger"/>
+<!-- 		<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true" connector-ref="SAP"> -->
+<!--         	<sap:default-in-memory-tid-store/> -->
+<!--         </sap:inbound-endpoint> -->
     </flow>
 </mule>

@@ -20,14 +20,18 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
     <batch:job name="businessLogicBatch1">
         <batch:threading-profile poolExhaustedAction="WAIT"/>
         <batch:input>
+        	<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true" connector-ref="SAP">
+        	<sap:default-in-memory-tid-store/>
+        </sap:inbound-endpoint>
             <data-mapper:transform config-ref="xml_to_list_product2_" doc:name="XML To List&lt;Product2&gt;"/>
         </batch:input>
         <batch:process-records>
             <batch:step name="foreachMaterialInAUpsertProductInBStep">
                 <batch:commit size="200" doc:name="Batch Commit">
-                    <sfdc:upsert config-ref="Salesforce" externalIdFieldName="sap_external_id__c" type="Product2" doc:name="Salesforce">
+                    <sfdc:upsert config-ref="Salesforce" externalIdFieldName="sap_external_id__c" type="Product2" doc:name="upsert Products in Salesforce">
                         <sfdc:objects ref="#[payload]"/>
                     </sfdc:upsert>
+                    <logger message="#[payload]" level="INFO" doc:name="Logger"/>
                 </batch:commit>
             </batch:step>
         </batch:process-records>

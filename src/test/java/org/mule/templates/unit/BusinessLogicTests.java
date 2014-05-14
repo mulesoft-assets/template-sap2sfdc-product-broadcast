@@ -31,11 +31,12 @@ public class BusinessLogicTests extends AbstractTemplateFunctionalMunitSuite {
 		muleContext.getRegistry().lookupObject(BatchManager.class)
 				.cancelAllRunningInstances();
 	}
-
+	
+	
 	@Override
 	protected String getConfigResources() {
 		// TOOD: this is an ugly hack and is here until an munit bug gets fixed
-		return "businessLogic.xml,config.xml,errorHandling.xml"
+		return "endpoints.xml, businessLogic.xml,config.xml,errorHandling.xml"
 				+ getTestFlows();
 	}
 
