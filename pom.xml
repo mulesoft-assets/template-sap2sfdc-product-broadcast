@@ -7,7 +7,7 @@
 	<artifactId>template-sap2sfdc-product-broadcast</artifactId>
 	<packaging>mule</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>SAP2SFDC-product-broadcast Anypoint Template Project</name>
+	<name>sap2sfdc-product-broadcast Mule Anypoint Template Project</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
