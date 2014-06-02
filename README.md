@@ -2,6 +2,7 @@
 # Anypoint Template: SAP2SFDC-product-broadcast
 
 + [Use Case](#usecase)
++ [Considerations](#considerations)
 + [Run it!](#runit)  
 	* [Running on premise](#runonopremise)
     * [Running on CloudHub](#runoncloudhub)
@@ -15,12 +16,13 @@
 
 # Use Case <a name="usecase"/>
 
+# Considerations <a name="considerations"/>
 
-## Foreword <a name="foreword"/>
 To make this Anypoint Template run, there are certain preconditions that must be considered. All of them deal with the preparations in both source (SAP) and destination (SFDC) systems, that must be made in order for all to run smoothly. 
 **Failling to do so could lead to unexpected behavior of the template.**
 
 ### SAP Pre Conditions
+
 
 ### SFDC Pre Conditions
 
