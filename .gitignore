@@ -59,3 +59,4 @@ src/test/resources/mule.test.properties
 src/main/app/lib/*.jar
 src/main/app/lib/*.so
 src/main/app/lib/*.jnilib
+.DS_Store

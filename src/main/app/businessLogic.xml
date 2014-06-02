@@ -15,15 +15,12 @@ http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/
 http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
 http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfdc/current/mule-sfdc.xsd
 http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd">
-    <data-mapper:config name="xml_to_list_product2_" transformationGraphPath="xml_to_list_product2_.grf" doc:name="xml_to_list_product2_"/>
+    <data-mapper:config name="XML_To_List_Product2_" transformationGraphPath="xml_to_list_product2__1.grf" doc:name="XML_To_List_Product2_"/>
     
     <batch:job name="businessLogicBatch1">
         <batch:threading-profile poolExhaustedAction="WAIT"/>
         <batch:input>
-        	<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true" connector-ref="SAP">
-        	<sap:default-in-memory-tid-store/>
-        </sap:inbound-endpoint>
-            <data-mapper:transform config-ref="xml_to_list_product2_" doc:name="XML To List&lt;Product2&gt;"/>
+            <data-mapper:transform config-ref="XML_To_List_Product2_" doc:name="XML To List&lt;Product2&gt;"/>
         </batch:input>
         <batch:process-records>
             <batch:step name="foreachMaterialInAUpsertProductInBStep">
@@ -31,7 +28,6 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
                     <sfdc:upsert config-ref="Salesforce" externalIdFieldName="sap_external_id__c" type="Product2" doc:name="upsert Products in Salesforce">
                         <sfdc:objects ref="#[payload]"/>
                     </sfdc:upsert>
-                    <logger message="#[payload]" level="INFO" doc:name="Logger"/>
                 </batch:commit>
             </batch:step>
         </batch:process-records>
@@ -40,4 +36,9 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
 			<logger level="INFO" doc:name="log 'Migration process has finished'" message="Migration process has finished: #[payload]" />
         </batch:on-complete>
     </batch:job>
+    
+    
+    
+    
+   
 </mule>

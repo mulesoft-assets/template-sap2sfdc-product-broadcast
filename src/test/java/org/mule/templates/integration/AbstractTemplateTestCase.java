@@ -2,9 +2,12 @@ package org.mule.templates.integration;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Date;
 import java.util.Properties;
 
+import org.apache.commons.io.IOUtils;
 import org.junit.Rule;
 import org.mule.api.config.MuleProperties;
 import org.mule.tck.junit4.FunctionalTestCase;
@@ -20,7 +23,7 @@ public class AbstractTemplateTestCase extends FunctionalTestCase {
 	private static final String TEST_FLOWS_FOLDER_PATH = "./src/test/resources/flows/";
 	private static final String MULE_DEPLOY_PROPERTIES_PATH = "./src/main/app/mule-deploy.properties";
 
-	protected static final String TEMPLATE_NAME = "opportunity-aggregation";
+	protected static final String TEMPLATE_NAME = "sap2sfdc-product-broadcast";
 
 	@Rule
 	public DynamicPort port = new DynamicPort("http.port");
@@ -78,6 +81,11 @@ public class AbstractTemplateTestCase extends FunctionalTestCase {
 		builder.append(timeStamp);
 
 		return builder.toString();
+	}
+	
+	protected static String getFileString(String filePath) throws IOException {
+		InputStream in = new FileInputStream(filePath);
+		return IOUtils.toString(in);
 	}
 
 }

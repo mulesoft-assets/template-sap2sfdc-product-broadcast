@@ -48,6 +48,26 @@ Simple steps to get SAP2SFDC-product-broadcast running
 
 In this section we detail the way you have to run you Anypoint Temple on you computer.
 
+### Where to Download Mule Studio and Mule ESB
+
+First thing to know if you are a newcomer to Mule is where to get the tools.
+
++ You can download Mule Studio from this [Location](http://www.mulesoft.com/platform/mule-studio)
++ You can download Mule ESB from this [Location](http://www.mulesoft.com/platform/soa/mule-esb-open-source-esb)
+
+### Importing an Anypoint Template into Studio
+
+Mule Studio offers several ways to import a project into the workspace, for instance: 
+
++ Anypoint Studio generated Deployable Archive (.zip)
++ Anypoint Studio Project from External Location
++ Maven-based Mule Project from pom.xml
++ Mule ESB Configuration XML from External Location
+
+You can find a detailled description on how to do so in this [Documentation Page](http://www.mulesoft.org/documentation/display/current/Importing+and+Exporting+in+Studio).
+
+
+
 ### Running on Studio <a name="runonstudio"/>
 Once you have imported you Anypoint Template into Anypoint Studio you need to follow these steps to run it:
 

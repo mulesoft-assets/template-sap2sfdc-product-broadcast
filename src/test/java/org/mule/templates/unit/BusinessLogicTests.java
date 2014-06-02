@@ -23,31 +23,20 @@ import com.mulesoft.module.batch.api.BatchManager;
  */
 public class BusinessLogicTests extends AbstractTemplateFunctionalMunitSuite {
 
-	private static final Integer AMOUNTS_OF_PRODUCTS_IN_THE_TEST_FILE = 17;
-	private static final String TEST_MAT_MASTER_FILE = "./src/test/resources/mat_master.xml";
+	private static final Integer AMOUNTS_OF_PRODUCTS_IN_THE_TEST_FILE = 1;
+	private static final String TEST_MAT_MASTER_FILE = "./src/test/resources/mat_master_new.xml";
 
 	@Before
 	public void setUp() throws RegistrationException, MuleException {
-		muleContext.getRegistry().lookupObject(BatchManager.class)
-				.cancelAllRunningInstances();
-	}
-	
-	
-	@Override
-	protected String getConfigResources() {
-		// TOOD: this is an ugly hack and is here until an munit bug gets fixed
-		return "endpoints.xml, businessLogic.xml,config.xml,errorHandling.xml"
-				+ getTestFlows();
+		muleContext.getRegistry().lookupObject(BatchManager.class).cancelAllRunningInstances();
 	}
 
 	@Test
 	public void testSuccessCall() throws MuleException, Exception {
 		String xmlPayload = getFileString(TEST_MAT_MASTER_FILE);
 
-		whenMessageProcessor("upsert").ofNamespace("sfdc").thenReturn(
-				testEvent("").getMessage());
-		spyMessageProcessor("upsert").ofNamespace("sfdc").before(
-				new ProductItemSpayValidator());
+		whenMessageProcessor("upsert").ofNamespace("sfdc").thenReturn(testEvent("").getMessage());
+		spyMessageProcessor("upsert").ofNamespace("sfdc").before(new ProductItemSpayValidator());
 
 		runFlow("callBatchFlow", testEvent(xmlPayload));
 
@@ -58,17 +47,13 @@ public class BusinessLogicTests extends AbstractTemplateFunctionalMunitSuite {
 
 		@Override
 		public void spy(MuleEvent event) throws MuleException {
-			List<Map<?, ?>> payload = (List<Map<?, ?>>) event.getMessage()
-					.getPayload();
+			List<Map<?, ?>> payload = (List<Map<?, ?>>) event.getMessage().getPayload();
 
-			Assert.assertTrue(AMOUNTS_OF_PRODUCTS_IN_THE_TEST_FILE
-					.equals(payload.size()));
+			Assert.assertTrue(AMOUNTS_OF_PRODUCTS_IN_THE_TEST_FILE.equals(payload.size()));
 
 			for (Map<?, ?> product : payload) {
-				Assert.assertTrue(StringUtils.isNotEmpty((String) product
-						.get("sap_external_id__c")));
-				Assert.assertTrue(StringUtils.isNotEmpty((String) product
-						.get("Name")));
+				Assert.assertTrue(StringUtils.isNotEmpty((String) product.get("sap_external_id__c")));
+				Assert.assertTrue(StringUtils.isNotEmpty((String) product.get("Name")));
 			}
 		}
 	}
