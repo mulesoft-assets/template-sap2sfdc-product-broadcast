@@ -22,6 +22,20 @@ To make this Anypoint Template run, there are certain preconditions that must be
 **Failling to do so could lead to unexpected behavior of the template.**
 
 ### SAP Pre Conditions
+There are a few things that needs to be done in SAP in order for this template to work. 
+
+1. RFC destination
+RFC destination of type "TCP/IP Connection" pointing to program ID on gateway needs to be created. The destination uses Unicode communication type with target system.
+
+2. Program ID registration
+RFC SDK is used to register program ID on gateway. Same program ID name is used here as in the RFC destination.
+
+3. Partner port
+Partner port needs to be defined type of Idoc of SAP release 4.x as its version. As RFC destination same RFC destination created earlier is used.
+
+4. Partner profile
+Partner profile needs to be customized type of logical system as partner type. Outbound parameter of message type MATMAS is defined in the partner profile. As receiver port an RFC destination created earlier is used. Idoc Type MATMAS01 is defined.
+
 
 
 ### SFDC Pre Conditions
