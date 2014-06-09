@@ -45,6 +45,14 @@ For instructions on how to create a custom field in SFDC plase check this link:
 + [Create Custom Fields](http://www.salesforce.com/smallbusinesscenter/faq/customize.jsp#customfield)
 ]]>
 		</section>
+		<section id="running_on_studio">
+		<![CDATA[
+In order to make this Anypoint Template run on Mule Studio there are a few extra steps that needs to be made.
+Please check this Documentation Page:
+
++ [Enabling Your Studio Project for SAP](http://www.mulesoft.org/documentation/display/current/SAP+Connector#SAPConnector-EnablingYourStudioProjectforSAP)
+		]]>
+		</section>
 		<section id="application_configuration">
 		<![CDATA[
 **SAP Connector configuration**
