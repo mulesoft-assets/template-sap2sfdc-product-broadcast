@@ -25,7 +25,7 @@ Here you should not:
 		<sap:inbound-endpoint type="idoc" rfcType="qrfc" xmlVersion="1" responseTimeout="10000" doc:name="SAP" jcoConnectionCount="${sap.jco.connectioncount}" jcoGwHost="${sap.jco.gwhost}" jcoGwService="${sap.jco.gwservice}" jcoProgramId="${sap.jco.idoc.programid}" outputXml="true" connector-ref="SAP">
 	    	<sap:default-in-memory-tid-store/>
 		</sap:inbound-endpoint>
-<!--         <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="${http.port}" doc:name="HTTP"/> -->
-        <logger level="INFO" doc:name="Logger" message="new message received from SAP "/>
+		
+		<batch:execute name="businessLogicBatch" doc:name="trigger businessLogicBatch"/>      
     </flow>
 </mule>

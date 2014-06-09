@@ -17,13 +17,13 @@ http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfd
 http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd">
     <data-mapper:config name="XML_To_List_Product2_" transformationGraphPath="xml_to_list_product2__1.grf" doc:name="XML_To_List_Product2_"/>
     
-    <batch:job name="businessLogicBatch1">
+    <batch:job name="businessLogicBatch">
         <batch:threading-profile poolExhaustedAction="WAIT"/>
         <batch:input>
-            <data-mapper:transform config-ref="XML_To_List_Product2_" doc:name="XML To List&lt;Product2&gt;"/>
+            <data-mapper:transform config-ref="XML_To_List_Product2_" doc:name="SAP XML To List&lt;Product2&gt;"/>
         </batch:input>
         <batch:process-records>
-            <batch:step name="foreachMaterialInAUpsertProductInBStep">
+            <batch:step name="foreachMaterialInSapUpsertProductInSFDCStep">
                 <batch:commit size="200" doc:name="Batch Commit">
                     <sfdc:upsert config-ref="Salesforce" externalIdFieldName="sap_external_id__c" type="Product2" doc:name="upsert Products in Salesforce">
                         <sfdc:objects ref="#[payload]"/>
@@ -36,9 +36,4 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
 			<logger level="INFO" doc:name="log 'Migration process has finished'" message="Migration process has finished: #[payload]" />
         </batch:on-complete>
     </batch:job>
-    
-    
-    
-    
-   
 </mule>
