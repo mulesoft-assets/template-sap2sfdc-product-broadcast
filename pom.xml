@@ -31,6 +31,10 @@
 							<groupId>org.mule.modules</groupId>
 							<artifactId>mule-module-sfdc</artifactId>
 						</inclusion>
+						<inclusion>
+							<groupId>com.mulesoft.munit.modules</groupId>
+							<artifactId>mule-module-synchronize</artifactId>
+						</inclusion>
 					</inclusions>
 				</configuration>
 			</plugin>
@@ -50,19 +54,12 @@
 			<version>${sap.transport.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.mulesoft.muleesb.modules</groupId>
-			<artifactId>mule-module-batch-ee</artifactId>
-			<version>${mule.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.modules</groupId>
-			<artifactId>mule-module-spring-config</artifactId>
-			<version>${mule.version}</version>
-			<scope>provided</scope>
+			<groupId>com.mulesoft.munit.modules</groupId>
+			<artifactId>mule-module-synchronize</artifactId>
+			<version>1.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
-	
+
 	<repositories>
 		<repository>
 			<id>mulesoft-releases</id>
@@ -75,6 +72,11 @@
 			<name>MuleSoft Snapshots Repository</name>
 			<url>https://repository.mulesoft.org/nexus/content/repositories/snapshots/</url>
 			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>mule-ee-snapshots</id>
+			<name>MuleEE Releases Repository</name>
+			<url>https://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
 		</repository>
 	</repositories>
 	<scm>
