@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfd
     <flow name="callBatchFlow" doc:name="callBatchFlow">
         <logger level="ERROR" message="++++++ BEFORE CALL BATCH" doc:name="Logger"></logger>
         <synchronize:run-and-wait timeout="60000" doc:name="Synchronize">
-            <batch:execute name="businessLogicBatch1" doc:name="Batch Execute"/>
+            <batch:execute name="businessLogicBatch" doc:name="Batch Execute"/>
         </synchronize:run-and-wait>
         <logger level="ERROR" message="++++++ AFTER CALL BATCH" doc:name="Logger"></logger>
     </flow>

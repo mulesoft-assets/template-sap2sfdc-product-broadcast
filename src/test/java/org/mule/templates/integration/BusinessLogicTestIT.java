@@ -65,7 +65,7 @@ public class BusinessLogicTestIT extends AbstractTemplateTestCase {
 			Map<String, Object> payload = new HashMap<String, Object>();
 			payload.put("sap_external_id__c", id);
 			Map<String, Object> result = invokeRetrieveFlow(retrieveProductFromSFDCFlow, payload);
-			Assert.assertNotNull("The SAP Material wit id " + id + " should have been sync", result);
+			Assert.assertNotNull("The SAP Material with id " + id + " should have been sync", result);
 			productsToDeleteFromSFDC.add(result);
 		}
 
