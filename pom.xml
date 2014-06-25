@@ -15,8 +15,7 @@
 	<name>sap2sfdc-product-broadcast Mule Anypoint Template Project</name>
 
 	<properties>
-		<sfdc.version>5.4.7</sfdc.version>
-		<sap.transport.version>2.2.2</sap.transport.version>
+		
 	</properties>
 
 	<build>
@@ -51,7 +50,7 @@
 		<dependency>
 			<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-sap</artifactId>
-			<version>${sap.transport.version}</version>
+			<version>${sap.version}</version>
 		</dependency>
 	</dependencies>
 
