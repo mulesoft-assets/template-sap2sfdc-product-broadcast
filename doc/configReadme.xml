@@ -98,5 +98,11 @@ For instance if 10 records are fetched from origin instance, then 1 api
 calls to SFDC will be made ( 1).
 ]]>
 		</section>
+			<section id="sap_src">
+<![CDATA[
+4. Partner profile
+Partner profile needs to be customized type of logical system as partner type. Outbound parameter of message type MATMAS is defined in the partner profile. As receiver port an RFC destination created earlier is used. Idoc Type MATMAS01 is defined.
+]]>
+		</section>
 	</sections>
 </configuration>
