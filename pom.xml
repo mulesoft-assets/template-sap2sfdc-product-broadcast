@@ -11,11 +11,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>template-sap2sfdc-product-broadcast</artifactId>
 	<packaging>mule</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>sap2sfdc-product-broadcast Mule Anypoint Template Project</name>
 
 	<properties>
-		
+		<sap.jco.version>3.0.9</sap.jco.version>
+		<sap.idoc.version>3.0.6</sap.idoc.version>
+		<sap.build.type>mac64</sap.build.type>
 	</properties>
 
 	<build>
@@ -37,6 +39,58 @@
 					</inclusions>
 				</configuration>
 			</plugin>
+
+			<!-- SAP Build -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.sap.conn.jco</groupId>
+									<artifactId>sapjco-native</artifactId>
+									<version>${sap.jco.version}</version>
+									<classifier>${sap.build.type}</classifier>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/temp-native-lib</outputDirectory>
+									<includes>**/*.dll,**/*.so,**/*.jnilib</includes>
+									<excludes>META-INF</excludes>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-native-lib</id>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<zip destfile="${project.build.directory}/${project.build.finalName}.zip"
+									update="true">
+									<zipfileset dir="${project.build.directory}/temp-native-lib"
+										prefix="lib" />
+								</zip>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -51,6 +105,27 @@
 			<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-sap</artifactId>
 			<version>${sap.version}</version>
+		</dependency>
+
+		<!-- SAP Dependencies -->
+		<dependency>
+			<groupId>com.sap.conn.jco</groupId>
+			<artifactId>sapjco</artifactId>
+			<version>${sap.jco.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.conn.jco</groupId>
+			<artifactId>sapjco-native</artifactId>
+			<version>${sap.jco.version}</version>
+			<classifier>${sap.build.type}</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sap.conn.idoc</groupId>
+			<artifactId>sapidoc</artifactId>
+			<version>${sap.idoc.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -68,9 +143,9 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-			<id>mule-ee-snapshots</id>
-			<name>MuleEE Releases Repository</name>
-			<url>https://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
+			<id>mule-ee-dependencies</id>
+			<name>Mule EE Dependencies</name>
+			<url>http://repository-master.mulesoft.org/nexus/content/repositories/mule-ee-dependencies/</url>
 		</repository>
 	</repositories>
 	<scm>
