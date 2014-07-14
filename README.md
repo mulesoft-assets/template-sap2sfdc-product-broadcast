@@ -38,13 +38,12 @@ Before continue with the use of this Anypoint Template, you may want to check ou
 with SAP and Anypoint Studio-
 
 ## Disclaimer
-This Anypoint template made use of a few Maven dependencies in oder to work.
-If you acquire this template with out maven support then you should not keep reading, if you did please continue.
 
-You will find that there are three dependencies in the pom.xml file that begin with the following group id:
-	<groupId>com.sap.conn.jco</groupId>
+This Anypoint template uses a few private Maven dependencies in oder to work. If you intend to run this template with Maven support, please continue reading.
 
-Theese dependencies are private for Mulesoft and will cause you application not to build from a Maven command line.
+You will find that there are three dependencies in the pom.xml file that begin with the following group id: 
+	**com.sap.conn.jco** 
+These dependencies are private for Mulesoft and will cause you application not to build from a Maven command line. You need to replace them with "provided" scope and copy the libraries into the build path.
 
 
 ## SAP Considerations <a name="sapconsiderations"/>
