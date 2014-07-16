@@ -60,3 +60,4 @@ src/main/app/lib/*.jar
 src/main/app/lib/*.so
 src/main/app/lib/*.jnilib
 .DS_Store
+*.trc
