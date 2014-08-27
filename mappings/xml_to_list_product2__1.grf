@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="damiansima" created="Fri May 30 10:07:14 ART 2014" description="XML To List&lt;Product2&gt;" guiVersion="3.4.3.P" id="1401477927581" licenseCode="Unlicensed" licenseType="Unknown" modified="Fri May 30 10:07:14 ART 2014" modifiedBy="damiansima" name="XML_To_List_Product2_" preview-file="${Project_Home}/src/test/resources/mat_master_small.xml" revision="1.0" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph __version="3.5.0" author="damiansima" created="Fri May 30 10:07:14 ART 2014" description="XML To List&lt;Product2&gt;" guiVersion="3.4.3.P" id="1401477927581" licenseCode="Unlicensed" licenseType="Unknown" modified="Fri May 30 10:07:14 ART 2014" modifiedBy="damiansima" name="XML_To_List_Product2_" preview-file="${Project_Home}/src/test/resources/mat_master_small.xml" revision="1.0" showComponentDetails="false">
 <Global>
 <Metadata __index="57" __referenceCounter="0" __schemaType="E1MAKTMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/E1MAKTM" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="94c46c3a-be93-4ed9-bc44-ab298969fc5f" _parent_id="__parent_id" _type="Input" id="d04f8527-6585-423a-9f4a-54f6b4adb07c">
 <Record fieldDelimiter="," name="E1MAKTM" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
@@ -187,7 +188,7 @@
 <Field __index="26" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/LVORM" containerType="SINGLE" label="LVORM" name="LVORM" type="string"/>
 <Field __index="27" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/MTART" containerType="SINGLE" label="MTART" name="MTART" type="string"/>
 <Field __index="28" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/MBRSH" containerType="SINGLE" label="MBRSH" name="MBRSH" type="string"/>
-<Field __index="29" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/MATKL" containerType="SINGLE" label="MATKL" name="MATKL" type="integer"/>
+<Field __cdata="false" __index="29" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/MATKL" containerType="SINGLE" label="MATKL" name="MATKL" type="string"/>
 <Field __index="30" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/MEINS" containerType="SINGLE" label="MEINS" name="MEINS" type="string"/>
 <Field __index="31" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/BLANZ" containerType="SINGLE" label="BLANZ" name="BLANZ" type="integer"/>
 <Field __index="32" __schemaType="E1MARAMType" __sourcePath="{}/MATMAS01/IDOC/E1MARAM/EKWSL" containerType="SINGLE" label="EKWSL" name="EKWSL" type="integer"/>
