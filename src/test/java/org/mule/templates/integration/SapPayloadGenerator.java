@@ -88,7 +88,7 @@ public class SapPayloadGenerator {
 		}
 	}
 
-	public void setTempalteName(String templateName) {
+	public void setTemplateName(String templateName) {
 		this.templateName = templateName;
 	}
 

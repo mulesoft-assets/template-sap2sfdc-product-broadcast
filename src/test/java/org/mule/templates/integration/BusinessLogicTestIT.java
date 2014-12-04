@@ -26,7 +26,7 @@ import com.mulesoft.module.batch.api.BatchManager;
 
 /**
  * The objective of this class is to validate the correct behavior of the flows
- * for this Anypoint Tempalte that make calls to external systems.
+ * for this Anypoint Template that make calls to external systems.
  * 
  */
 public class BusinessLogicTestIT extends AbstractTemplateTestCase {
@@ -53,14 +53,14 @@ public class BusinessLogicTestIT extends AbstractTemplateTestCase {
 	public void testMainFlow() throws Exception {
 		String originalXML = getFileString(TEST_MAT_MASTER_FILE);
 		SapPayloadGenerator generator = new SapPayloadGenerator(originalXML);
-		generator.setTempalteName(TEMPLATE_NAME);
+		generator.setTemplateName(TEMPLATE_NAME);
 		String xmlPayload = generator.generateXML();
 
 		runFlow("callBatchFlow", xmlPayload);
 
 		generator.getUniqueIdList();
 		System.out.println("DONE");
-
+		Thread.sleep(5000);
 		for (String id : generator.getUniqueIdList()) {
 			Map<String, Object> payload = new HashMap<String, Object>();
 			payload.put("sap_external_id__c", id);
