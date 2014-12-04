@@ -1,10 +1,10 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
 		<groupId>org.mule.templates</groupId>
 		<artifactId>templates-tooling-parent-pom</artifactId>
-		<version>1.0.7</version>
+		<version>1.0.8</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -15,7 +15,7 @@
 
 	<properties>
 		<sap.jco.version>3.0.9</sap.jco.version>
-		<sap.idoc.version>3.0.6</sap.idoc.version>
+		<sap.idoc.version>3.0.11</sap.idoc.version>
 		<sap.build.type>mac64</sap.build.type>
 	</properties>
 
@@ -31,7 +31,11 @@
 							<groupId>org.mule.modules</groupId>
 							<artifactId>mule-module-sfdc</artifactId>
 						</inclusion>
-					</inclusions>
+					<inclusion>
+                            <groupId>com.mulesoft.munit.modules</groupId>
+                            <artifactId>mule-module-synchronize</artifactId>
+                        </inclusion>
+                    </inclusions>
 				</configuration>
 			</plugin>
 
@@ -74,7 +78,7 @@
 						<configuration>
 							<tasks>
 								<zip destfile="${project.build.directory}/${project.build.finalName}.zip" update="true">
-									<zipfileset dir="${project.build.directory}/temp-native-lib" prefix="lib" />
+									<zipfileset dir="${project.build.directory}/temp-native-lib" prefix="lib"/>
 								</zip>
 							</tasks>
 						</configuration>
@@ -120,7 +124,18 @@
 			<version>${sap.idoc.version}</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+	<dependency>
+            <groupId>com.mulesoft.munit.modules</groupId>
+            <artifactId>mule-module-synchronize</artifactId>
+            <version>1.0</version>
+        </dependency>
+    <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-module-spring-config</artifactId>
+            <version>${mule.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 	<repositories>
 		<repository>
@@ -140,7 +155,12 @@
 			<name>Mule EE Dependencies</name>
 			<url>http://repository-master.mulesoft.org/nexus/content/repositories/mule-ee-dependencies/</url>
 		</repository>
-	</repositories>
+	<repository>
+            <id>mule-ee-releases</id>
+            <name>MuleEE Releases Repository</name>
+            <url>https://repository-master.mulesoft.org/nexus/content/repositories/ci-releases/</url>
+        </repository>
+    </repositories>
 	<scm>
 		<connection>scm:git:https://github.com/mulesoft/template-sap2sfdc-product-broadcast.git</connection>
 		<developerConnection>scm:git:https://github.com/mulesoft/template-sap2sfdc-product-broadcast.git</developerConnection>

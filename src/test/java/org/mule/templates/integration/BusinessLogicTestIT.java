@@ -60,7 +60,7 @@ public class BusinessLogicTestIT extends AbstractTemplateTestCase {
 
 		generator.getUniqueIdList();
 		System.out.println("DONE");
-
+		Thread.sleep(5000);
 		for (String id : generator.getUniqueIdList()) {
 			Map<String, Object> payload = new HashMap<String, Object>();
 			payload.put("sap_external_id__c", id);
