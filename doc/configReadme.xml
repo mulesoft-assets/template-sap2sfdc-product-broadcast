@@ -1,11 +1,20 @@
 <?xml version="1.0"?>
 <configuration>
 	<placeholders>
-		<placeholder id="template_name">SAP2SFDC-product-broadcast</placeholder>
+		<placeholder id="template_name">SAP to Salesforce Product Broadcast</placeholder>
 	</placeholders>
 	<sections>
 		<section id="use_case">
-			WE NEED A NICE GUY WHO WRITE THIS FOR US!!!!
+This Anypoint Template should serve as a foundation for setting an online sync of materials from SAP to Salesforce.
+Every time there is a new material (SFDC product) or a change in an already existing one, SAP will send the IDoc with it to the running template which will update/create a product in Salesforce target instance.
+
+Requirements have been set not only to be used as examples, but also to establish a starting point to adapt your integration to your requirements.
+
+As implemented, this Anypoint Template leverages the [Batch Module](http://www.mulesoft.org/documentation/display/current/Batch+Processing). The batch job is divided in Input, Process and On Complete stages.
+
+The integration is triggered by a SAP Endpoint that receives the SAP Material as IDoc XML. This XML is passed to the batch process.
+In the Batch Input stage the SAP Material is transformed to a Salesforce Product and it is upserted in the Batch Step to Salesforce using a Batch Commit.
+Finally during the On Complete stage the Anypoint Template will log output statistics data into the console.
 		</section>
 		<section id="considerations">
 		<![CDATA[
@@ -18,7 +27,7 @@ with SAP and Anypoint Studio.
 
 ## Disclaimer
 
-This Anypoint template uses a few private Maven dependencies in oder to work. If you intend to run this template with Maven support, please continue reading.
+This Anypoint template uses a few private Maven dependencies in order to work. If you intend to run this template with Maven support, please continue reading.
 
 You will find that there are three dependencies in the pom.xml file that begin with the following group id: 
 	**com.sap.conn.jco** 
@@ -27,8 +36,7 @@ These dependencies are private for Mulesoft and will cause you application not t
 		</section>
 		<section id="sap_src">
 <![CDATA[
-4. Partner profile
-Partner profile needs to be customized type of logical system as partner type. Outbound parameter of message type MATMAS is defined in the partner profile. As receiver port an RFC destination created earlier is used. Idoc Type MATMAS01 is defined.
+The Partner profile needs to have a customized type of logical system set as partner type. An outbound parameter of message type MATMAS should be defined in the partner profile. A RFC destination created earlier should be defined as Receiver Port. Idoc Type base type should be set as MATMAS01.
 ]]>
 		</section>
 		<section id="sfdc_dst">
