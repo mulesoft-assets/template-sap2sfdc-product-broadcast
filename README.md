@@ -106,6 +106,10 @@ For instructions on how to create a custom field in SFDC plase check this link:
 
 
 
+
+
+
+
 # Run it! <a name="runit"/>
 Simple steps to get SAP to Salesforce Product Broadcast running.
 
