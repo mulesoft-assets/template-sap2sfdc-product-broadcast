@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -31,6 +33,7 @@ import com.mulesoft.module.batch.api.BatchManager;
  */
 public class BusinessLogicTestIT extends AbstractTemplateTestCase {
 	private static final String TEST_MAT_MASTER_FILE = "./src/test/resources/mat_master_new.xml";
+	private static final Logger LOGGER = LogManager.getLogger(SapPayloadGenerator.class);
 
 	private SubflowInterceptingChainLifecycleWrapper retrieveProductFromSFDCFlow;
 
@@ -55,11 +58,11 @@ public class BusinessLogicTestIT extends AbstractTemplateTestCase {
 		SapPayloadGenerator generator = new SapPayloadGenerator(originalXML);
 		generator.setTemplateName(TEMPLATE_NAME);
 		String xmlPayload = generator.generateXML();
-
+		
 		runFlow("callBatchFlow", xmlPayload);
 
 		generator.getUniqueIdList();
-		System.out.println("DONE");
+		LOGGER.info("DONE");
 		Thread.sleep(5000);
 		for (String id : generator.getUniqueIdList()) {
 			Map<String, Object> payload = new HashMap<String, Object>();
