@@ -85,6 +85,12 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>com.mulesoft.muleesb.modules</groupId>
+			<artifactId>mule-module-batch-ee</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.mulesoft.munit.modules</groupId>
 			<artifactId>mule-module-synchronize</artifactId>
 			<version>1.0</version>
