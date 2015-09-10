@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-      
 <mule version="EE-3.7.1" 
 	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" 
 	xmlns:json="http://www.mulesoft.org/schema/mule/json"
 	xmlns:batch="http://www.mulesoft.org/schema/mule/batch" 
 	xmlns:sfdc="http://www.mulesoft.org/schema/mule/sfdc" 
-	xmlns:sap="http://www.mulesoft.org/schema/mule/sap" 
 	xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking"
     xmlns="http://www.mulesoft.org/schema/mule/core"
     xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
@@ -16,7 +14,6 @@
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
-http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/current/mule-sap.xsd
 http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfdc/current/mule-sfdc.xsd
 http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
 http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
