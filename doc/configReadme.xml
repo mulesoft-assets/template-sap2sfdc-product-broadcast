@@ -10,7 +10,7 @@ Every time there is a new material (SFDC product) or a change in an already exis
 
 Requirements have been set not only to be used as examples, but also to establish a starting point to adapt your integration to your requirements.
 
-As implemented, this Anypoint Template leverages the [Batch Module](http://www.mulesoft.org/documentation/display/current/Batch+Processing). The batch job is divided in Input, Process and On Complete stages.
+As implemented, this Anypoint Template leverages the [Batch Module](http://www.mulesoft.org/documentation/display/current/Batch+Processing). The batch job is divided into Input, Process and On Complete stages.
 
 The integration is triggered by a SAP Endpoint that receives the SAP Material as IDoc XML. This XML is passed to the batch process.
 In the Batch Input stage the SAP Material is transformed to a Salesforce Product and it is upserted in the Batch Step to Salesforce using a Batch Commit.
@@ -45,7 +45,7 @@ This template makes use of the `External ID` field offered by Salesforce. Here i
 
 + [What is an external ID?](http://help.salesforce.com/apex/HTViewHelpDoc?id=faq_import_general_what_is_an_external.htm)
 
-The templates uses the External ID in order to do xRef between the entities in both systems. The idea is, once an entity is created in SFDC it's decorated with an ID from the source system which will be used afteward for the template to reference it.
+The template uses the External ID in order to do xRef between the entities in both systems. The idea is, once an entity is created in SFDC it's decorated with an ID from the source system which will be used aftewards for the template to reference it.
 
 You will need to create a new custom field in your **Product** entity in SFDC with the following name: 
 
@@ -87,7 +87,7 @@ Please check this Documentation Page:
 + sfdc.username=bob.dylan@sfdc
 + sfdc.password=DylanPassword123
 + sfdc.securityToken=avsfwCUl7apQs56Xq2AKi3X
-+ sfdc.url=https://test.salesforce.com/services/Soap/u/28.0
++ sfdc.url=https://test.salesforce.com/services/Soap/u/32.0
 ]]>
 		</section>
 		<section id="api_calls">

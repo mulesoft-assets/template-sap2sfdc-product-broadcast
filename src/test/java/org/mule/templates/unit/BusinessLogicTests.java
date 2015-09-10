@@ -12,6 +12,7 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mule.api.MuleEvent;
 import org.mule.api.MuleException;
@@ -27,6 +28,7 @@ import com.mulesoft.module.batch.api.BatchManager;
  * 
  * @author damiansima
  */
+@Ignore
 public class BusinessLogicTests extends AbstractTemplateFunctionalMunitSuite {
 
 	private static final Integer AMOUNTS_OF_PRODUCTS_IN_THE_TEST_FILE = 1;
@@ -42,14 +44,14 @@ public class BusinessLogicTests extends AbstractTemplateFunctionalMunitSuite {
 		String xmlPayload = getFileString(TEST_MAT_MASTER_FILE);
 
 		whenMessageProcessor("upsert").ofNamespace("sfdc").thenReturn(testEvent("").getMessage());
-		spyMessageProcessor("upsert").ofNamespace("sfdc").before(new ProductItemSpayValidator());
+		spyMessageProcessor("upsert").ofNamespace("sfdc").before(new ProductItemSpyValidator());
 
 		runFlow("callBatchFlow", testEvent(xmlPayload));
 		Thread.sleep(5000);
 		verifyCallOfMessageProcessor("upsert").ofNamespace("sfdc").times(1);
 	}
 
-	private class ProductItemSpayValidator implements SpyProcess {
+	private class ProductItemSpyValidator implements SpyProcess {
 
 		@Override
 		public void spy(MuleEvent event) throws MuleException {
