@@ -33,7 +33,7 @@ import com.mulesoft.module.batch.api.BatchManager;
  */
 public class BusinessLogicTestIT extends AbstractTemplateTestCase {
 	private static final String TEST_MAT_MASTER_FILE = "./src/test/resources/mat_master_new.xml";
-	private static final Logger LOGGER = LogManager.getLogger(SapPayloadGenerator.class);
+	private static final Logger LOGGER = LogManager.getLogger(BusinessLogicTestIT.class);
 
 	private SubflowInterceptingChainLifecycleWrapper retrieveProductFromSFDCFlow;
 
