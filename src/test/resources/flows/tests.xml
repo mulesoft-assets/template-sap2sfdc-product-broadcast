@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 	
-<mule version="EE-3.7.1"  
+<mule version="EE-3.7.2"  
 	xmlns:sfdc="http://www.mulesoft.org/schema/mule/sfdc" 
 	xmlns:core="http://www.mulesoft.org/schema/mule/core" 
 	xmlns:synchronize="http://www.mulesoft.org/schema/mule/synchronize" 
