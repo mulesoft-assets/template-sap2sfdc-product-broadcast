@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce"
+      xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+      xmlns:batch="http://www.mulesoft.org/schema/mule/batch"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd">
+
+<flow name="businessLogicFlow" doc:id="8759532e-79b7-4789-990c-dc8e162bfd67" >
+    <ee:transform doc:name="SAP XML to List Products" doc:id="94db1272-86dc-4cdc-9f53-39918e3f8df6" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+[{
+	Name               : (payload.MATMAS01.IDOC.E1MARAM.*E1MAKTM filter $.SPRAS_ISO == "EN")[0].MAKTX,
+	sap_external_id__c : payload.MATMAS01.IDOC.E1MARAM.MATNR
+}]]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<batch:job jobName="businessLogicBatch" doc:id="204892ae-0d97-4326-beae-310c8d52b7a6">
+        <batch:process-records>
+            <batch:step name="foreachMaterialInSapUpsertProductInSFDCStep" doc:id="78a74ab4-9b91-416d-985a-acda2ac377eb">
+                <batch:aggregator doc:name="Batch Aggregator" doc:id="1ad86a98-643e-494a-a90a-32daab0b03cc" size="${page.size}">
+                    <logger level="INFO" doc:name="Log request" doc:id="d7c469d5-b41e-4d5b-86c3-c16bec533a4a" message="Before upsert #[output application/json --- payload]"/>
+						<salesforce:upsert type="Product2" doc:name="upsert Products in Salesforce" doc:id="71226257-fcea-4e22-9211-fdaf78d94727" config-ref="Salesforce_Sfdc_config" externalIdFieldName="sap_external_id__c"/>
+						<logger level="INFO" doc:name="Log result" doc:id="7236a9f6-7aaf-4f40-94e3-e477a132e88d" message="After upsert #[output application/json --- payload]"/>
+                </batch:aggregator>
+            </batch:step>
+        </batch:process-records>
+        <batch:on-complete>
+            <ee:transform doc:name="Prepare migration result" doc:id="c84b4bc4-5a65-41c1-9d0c-f1ebd3d8db7a">
+                <ee:message>
+                    <ee:set-payload><![CDATA[%dw 2.0
+output text/plain
+---
+"Migration Report: \n"
+
+++ "\n Time [milliseconds]: " 		++ payload.elapsedTimeInMillis
+++ "\n Total Records: "				++ payload.totalRecords
+++ "\n Successful Records: "		++ payload.successfulRecords
+++ "\n Failed Records: "			++ payload.failedRecords
+++ "\n Loaded Records: "			++ payload.loadedRecords
+++ "\n Processed Records: " 		++ payload.processedRecords]]></ee:set-payload>
+                </ee:message>
+            </ee:transform>
+            <logger level="INFO" doc:name="Migration process has finished!" doc:id="b7575d38-7dbd-4602-9186-1bbb25234896" message="Migration process has finished: #[payload]" />
+
+        </batch:on-complete>
+
+    </batch:job>
+</flow>
+
+</mule>
+
+
+        
