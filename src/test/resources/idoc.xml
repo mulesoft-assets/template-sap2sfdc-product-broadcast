@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MATMAS01>
+  <IDOC BEGIN="1">
+    <E1MARAM SEGMENT="1">
+      <MATNR>TEST</MATNR>
+      <E1MAKTM SEGMENT="1">
+        <MSGFN>005</MSGFN>
+        <SPRAS>E</SPRAS>
+        <MAKTX>TEST</MAKTX>
+        <SPRAS_ISO>EN</SPRAS_ISO>
+      </E1MAKTM>
+      <E1MAKTM SEGMENT="1">
+        <MSGFN>005</MSGFN>
+        <SPRAS>F</SPRAS>
+        <MAKTX>TEST</MAKTX>
+        <SPRAS_ISO>FR</SPRAS_ISO>
+      </E1MAKTM>
+      <E1MAKTM SEGMENT="1">
+        <MSGFN>005</MSGFN>
+        <SPRAS>G</SPRAS>
+        <MAKTX>TEST</MAKTX>
+        <SPRAS_ISO>EL</SPRAS_ISO>
+      </E1MAKTM>
+      <E1MAKTM SEGMENT="1">
+        <MSGFN>005</MSGFN>
+        <SPRAS>R</SPRAS>
+        <MAKTX>Test</MAKTX>
+        <SPRAS_ISO>RU</SPRAS_ISO>
+      </E1MAKTM>
+    </E1MARAM>
+  </IDOC>
+</MATMAS01>
