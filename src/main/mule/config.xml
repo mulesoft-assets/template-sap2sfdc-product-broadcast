@@ -1,15 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce" xmlns:sap="http://www.mulesoft.org/schema/mule/sap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/current/mule-sap.xsd http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd">
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce"
+    xmlns:sap="http://www.mulesoft.org/schema/mule/sap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/current/mule-sap.xsd http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd">
 
-	<salesforce:sfdc-config name="Salesforce_Sfdc_config" doc:id="38a0808d-8f32-4c87-a763-4db431b3c4cd" doc:name="Salesforce Sfdc config">
-		<salesforce:basic-connection password="${sfdc.password}" securityToken="${sfdc.securityToken}" username="${sfdc.username}" />
-	</salesforce:sfdc-config>
+    <global-property doc:name="Global Property" name="mule.env" value="dev" />
+    <configuration-properties file="common.properties" doc:id="cca3bc6f-82eb-4896-8427-e9b3e0358857" doc:name="Configuration properties" />
+    <configuration-properties file="mule.${mule.env}.properties" doc:id="f6877f57-da2d-43e5-aeed-183ce200d2aa" doc:name="Configuration properties" />
 
-	<configuration-properties file="common.properties" doc:id="7584fb1d-2fa2-445a-b949-eed01f5785bd" doc:name="Configuration properties" />
-	<configuration-properties file="mule.${mule.env}.properties" doc:id="86e0eb9d-cf2e-451a-9e09-b4afdf13e0e9" doc:name="Configuration properties" />
-	<configuration-properties file="mule-artifact.properties" doc:id="0abdf143-d5d1-4168-bdbd-7e3722442725" doc:name="Configuration properties" />
-	<sap:inbound-config name="SAP_Inbound" doc:id="5720b0d2-5e69-4d3b-9665-5279ad1e2bc7" doc:name="SAP Inbound">
-		<sap:simple-connection-provider-connection applicationServerHost="${sap.jco.ashost}" client="${sap.jco.client}" language="${sap.jco.lang}" password="${sap.jco.passwd}" systemNumber="${sap.jco.sysnr}" username="${sap.jco.user}" />
-	</sap:inbound-config>
+    <salesforce:sfdc-config name="Salesforce_Sfdc_config" doc:id="38a0808d-8f32-4c87-a763-4db431b3c4cd" doc:name="Salesforce Sfdc config">
+        <salesforce:basic-connection password="${sfdc.password}" securityToken="${sfdc.securityToken}" username="${sfdc.username}" />
+    </salesforce:sfdc-config>
 
-<global-property doc:name="Global Property" name="mule.env" value="dev" /></mule>
+    <sap:inbound-config name="SAP_Inbound" doc:id="5720b0d2-5e69-4d3b-9665-5279ad1e2bc7" doc:name="SAP Inbound">
+        <sap:simple-connection-provider-connection applicationServerHost="${sap.jco.ashost}" client="${sap.jco.client}"
+            language="${sap.jco.lang}" password="${sap.jco.passwd}" systemNumber="${sap.jco.sysnr}" username="${sap.jco.user}" />
+    </sap:inbound-config>
+</mule>
