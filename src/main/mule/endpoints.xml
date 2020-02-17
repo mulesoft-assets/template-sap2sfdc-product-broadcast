@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:sap="http://www.mulesoft.org/schema/mule/sap"
-      xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+<mule xmlns:sap="http://www.mulesoft.org/schema/mule/sap" xmlns="http://www.mulesoft.org/schema/mule/core"
+    xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/sap http://www.mulesoft.org/schema/mule/sap/current/mule-sap.xsd">
 
-<flow name="TriggerFlow" doc:id="aff4106d-d2f6-4366-940a-a380dcb1cf73" >
-    <sap:document-source doc:name="Document source" doc:id="1b48ee7a-5ac6-437e-94d3-b434589eecc3" config-ref="SAP_Inbound" gatewayHost="${sap.jco.gwhost}" gatewayService="${sap.jco.gwservice}" programID="${sap.jco.idoc.programid}" connectionCount="${sap.jco.connectioncount}" operationTimeout="${sap.jco.operationtimeout}"/>
-    <logger level="INFO" doc:name="log input data" doc:id="afdb88b8-7791-4ede-b656-fb66e66a0d4a" message="#[output application/xml --- payload]"/>
-		<flow-ref doc:name="businessLogicFlow" doc:id="30e03e17-0d6f-42b0-b57b-dba22f5c5a6d" name="businessLogicFlow"/>
-		<error-handler >
-        <on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="488b507d-e26c-4c56-8759-8bb4f6645d71" type="ANY">
-            <flow-ref doc:name="errorHandlingFlow" doc:id="afdaf73c-0137-4d60-84f6-5c41234771a3" name="errorHandlingFlow"/>
-        </on-error-propagate>
-    </error-handler>
-</flow>
+    <flow name="TriggerFlow" doc:id="aff4106d-d2f6-4366-940a-a380dcb1cf73">
+        <sap:document-listener doc:name="Document source" doc:id="1b48ee7a-5ac6-437e-94d3-b434589eecc3" config-ref="SAP_Config"
+            gatewayHost="${sap.jco.gwhost}" gatewayService="${sap.jco.gwservice}" programID="${sap.jco.idoc.programid}"
+            connectionCount="${sap.jco.connectioncount}" operationTimeout="${sap.jco.operationtimeout}" />
+        <logger level="INFO" doc:name="log input data" doc:id="afdb88b8-7791-4ede-b656-fb66e66a0d4a"
+            message="#[output application/xml --- payload]" />
+        <flow-ref doc:name="businessLogicFlow" doc:id="30e03e17-0d6f-42b0-b57b-dba22f5c5a6d" name="businessLogicFlow" />
+        <error-handler>
+            <on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate"
+                doc:id="488b507d-e26c-4c56-8759-8bb4f6645d71" type="ANY">
+                <flow-ref doc:name="errorHandlingFlow" doc:id="afdaf73c-0137-4d60-84f6-5c41234771a3" name="errorHandlingFlow" />
+            </on-error-propagate>
+        </error-handler>
+    </flow>
 </mule>
 
 
