@@ -27,7 +27,7 @@ output application/java
             <batch:step name="foreachMaterialInSapUpsertProductInSFDCStep" doc:id="78a74ab4-9b91-416d-985a-acda2ac377eb">
                 <batch:aggregator doc:name="Batch Aggregator" doc:id="1ad86a98-643e-494a-a90a-32daab0b03cc" size="${page.size}">
                     <logger level="INFO" doc:name="Log request" doc:id="d7c469d5-b41e-4d5b-86c3-c16bec533a4a" message="Before upsert #[output application/json --- payload]"/>
-						<salesforce:upsert type="Product2" doc:name="upsert Products in Salesforce" doc:id="71226257-fcea-4e22-9211-fdaf78d94727" config-ref="Salesforce_Sfdc_config" externalIdFieldName="sap_external_id__c"/>
+						<salesforce:upsert objectType="Product2" doc:name="upsert Products in Salesforce" doc:id="71226257-fcea-4e22-9211-fdaf78d94727" config-ref="Salesforce_Sfdc_config" externalIdFieldName="sap_external_id__c"/>
 						<logger level="INFO" doc:name="Log result" doc:id="7236a9f6-7aaf-4f40-94e3-e477a132e88d" message="After upsert #[output application/json --- payload]"/>
                 </batch:aggregator>
             </batch:step>

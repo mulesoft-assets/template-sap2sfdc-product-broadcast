@@ -25,7 +25,7 @@ http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mu
             <scripting:execute engine="groovy" doc:name="Sleep for 30s until the processing is completed" doc:id="d513c010-9507-487d-8ea0-351e25ddfe33">
                 <scripting:code>sleep(30000)</scripting:code>
             </scripting:execute>
-			<salesforce:query-single doc:name="Query record should be created in Salesforce" doc:id="5a007b1d-7dfb-4bf3-ad03-d2ced442424c"
+			<salesforce:query doc:name="Query record should be created in Salesforce" doc:id="5a007b1d-7dfb-4bf3-ad03-d2ced442424c"
                 config-ref="Salesforce_Sfdc_config" target="resultCreated">
                 <salesforce:salesforce-query>SELECT Id FROM Product2 WHERE sap_external_id__c = ':sapId'</salesforce:salesforce-query>
                 <salesforce:parameters><![CDATA[#[output application/java
@@ -33,7 +33,7 @@ http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mu
 {
     "sapId" : vars.iDoc.MATMAS01.IDOC.E1MARAM.MATNR
 }]]]></salesforce:parameters>
-            </salesforce:query-single>
+            </salesforce:query>
         </munit:execution>
         <munit:validation>
             <munit-tools:assert-that doc:name="Assert that record was added to Salesforce" doc:id="08b9eb7b-21f5-4b14-852f-956e01de26d2"
@@ -45,7 +45,7 @@ http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mu
 
     <munit:after-test name="test-suite-After_Test" description="After tests actions" doc:id="67bc61e5-e7e6-42ff-93d0-a90cd8ab0fe4">
         <salesforce:delete doc:name="Delete test data from Salesforce" doc:id="911bd34f-e823-4eb1-a6f3-a62efc75e037" config-ref="Salesforce_Sfdc_config">
-            <salesforce:delete-ids><![CDATA[#[[vars.resultCreated.Id]]]]></salesforce:delete-ids>
+            <salesforce:ids><![CDATA[#[vars.resultCreated.Id]]]></salesforce:ids>
         </salesforce:delete>
     </munit:after-test>
 </mule>
